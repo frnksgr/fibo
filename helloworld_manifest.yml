@@ -1,0 +1,17 @@
+applications:
+- name: helloworld
+  buildpacks:
+  - go_buildpack
+  disk_quota: 100M
+  env:
+    FROM: cloudfoundry-buildpack
+    GOPACKAGENAME: helloworld
+    GOVERSION: go1.11
+  instances: 2
+  memory: 32M
+  routes:
+  - route: helloworld.sys.cf.frnksgr.net
+  - route: helloworld.priv.cf.frnksgr.net
+  - route: helloworld.pub.cf.frnksgr.net
+  - route: helloworld.apps.internal
+  stack: cflinuxfs3

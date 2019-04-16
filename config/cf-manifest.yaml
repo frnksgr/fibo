@@ -1,0 +1,14 @@
+---
+applications:
+- name: fibo
+  buildpacks: 
+  - binary_buildpack
+  path: ../bin
+  memory: 10M
+  disk_quota: 100M
+  instances: 2
+  command: ./fibo
+  routes:
+    - route: fibo.priv.cf.frnksgr.net
+    - route: fibo.pub.cf.frnksgr.net
+  

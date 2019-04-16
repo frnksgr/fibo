@@ -1,0 +1,7 @@
+applications:
+- name: fibo
+  env:
+    FROM: cloudfoundry-buildpack
+    GO111MODULE: "true"
+    GOPACKAGENAME: github.com/frnksgr/fibo/pkg/fibo
+    GOVERSION: go1.11
