@@ -6,7 +6,8 @@ BASEIMAGE 		?: alpine\:3.9
 build: 
 	go build -v ./pkg/...
 
-bin/fibo: build
+.PHONY: fibo
+fibo: build
 	go build  -o ./bin/fibo ./cmd/fibo/main.go
 
 .PHONY: docker-build
@@ -20,3 +21,8 @@ docker-push:
 .PHONY: cf-push
 cf-push: bin/fibo
 	cf push -f config/cf-manifest.yaml
+
+.PHONY: clean
+clean:
+	go clean -i ./...
+	rm -f bin/fibo
