@@ -12,5 +12,5 @@ applications:
     - route: fibo.priv.cf.frnksgr.net
     - route: fibo.pub.cf.frnksgr.net
   env:
-    MSURL: http://fibo.priv.cf.frnksgr.net/fibo/microservice
+    FIBO_URL: http://fibo.priv.cf.frnksgr.net/fibo/microservice
   

@@ -9,9 +9,9 @@ spec:
       revisionTemplate:
         spec:
           container:
-            image: docker.io/frnksgr/fibo
+            image: docker.io/frnksgr/fibo:latest
             env:
             - name: PORT
               value: "8080"
-            - name: MSURL
+            - name: FIBO_URL
               value: http://localhost/fibo/microservice
