@@ -14,4 +14,4 @@ spec:
             - name: PORT
               value: "8080"
             - name: FIBO_URL
-              value: http://localhost/fibo/microservice
+              value: http://fibo.default.svc.cluster.local/fibo/microservice
