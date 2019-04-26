@@ -16,7 +16,7 @@ help:
 .PHONY: build
 build: ## build local to create bin/fibo executable
 	go build -v ./pkg/...
-	go build -o ./bin/fibo ./cmd/fibo/main.go
+	go build -o ./bin/fibo ./cmd/fibo/...
 
 .PHONY: docker-build
 docker-build: ## build docker image
