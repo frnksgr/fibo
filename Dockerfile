@@ -1,7 +1,7 @@
 # use scratch for K8S production
 ARG BASEIMAGE=scratch
 
-FROM golang:1.11 as builder
+FROM golang:1.12 as builder
 WORKDIR /go/src/github.com/frnksgr/fibo
 COPY . .
 RUN CGO_ENABLED=0 GOOS=linux go install ./...

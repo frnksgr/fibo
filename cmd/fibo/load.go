@@ -49,8 +49,6 @@ func handleLoad(w http.ResponseWriter, r *http.Request) {
 	case "GET":
 		value := r.URL.Query().Get("s")
 		if len(value) == 0 {
-			log.Println("Paramter 's' missing or has no value")
-			w.WriteHeader(http.StatusBadRequest)
 			return
 		}
 		size, err := parseSize(value)
